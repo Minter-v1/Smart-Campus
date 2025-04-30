@@ -11,7 +11,7 @@ import SwiftUI
 struct SmartCampusApp: App {
     var body: some Scene {
         WindowGroup {
-            SignUpView()
+            FindId()
         }
     }
 }

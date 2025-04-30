@@ -32,7 +32,7 @@ struct InputField: View {
             .padding(.leading, 3)
             .padding(.trailing, 31)
             .frame(maxWidth: .infinity, alignment: .leading)
-            .overlay(
+            .overlay(//밑에 underline !!!
                 Rectangle()
                     .frame(height: 1)
                     .foregroundColor(Color(red: 0.87, green: 0.87, blue: 0.87)),

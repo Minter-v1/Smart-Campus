@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct NavBar: View {
-    var lable: String
+    var lable: String //
     
     var body: some View {
         VStack(alignment: .center, spacing: 0) {// 얘는 leading 타입이 없나..?
