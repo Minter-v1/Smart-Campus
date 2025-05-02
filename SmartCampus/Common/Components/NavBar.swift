@@ -23,7 +23,7 @@ struct NavBar: View {
                 
             }
             .frame(maxWidth: .infinity, alignment: .leading) //frame정렬하니까 텍스트가 움직이네..
-            .background(.white)
+            
         }
         .padding(.top, 10)
         .padding(.leading, 20)
