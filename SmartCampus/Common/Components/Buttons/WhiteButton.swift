@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct WhiteButton: View {
-    var text: String
+    var text: String = "white buttono"
     
     var body: some View {
     
@@ -33,3 +33,6 @@ struct WhiteButton: View {
     }
 }
 
+#Preview {
+    WhiteButton()
+}
