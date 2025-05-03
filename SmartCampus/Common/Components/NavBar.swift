@@ -23,11 +23,16 @@ struct NavBar: View {
                 
             }
             .frame(maxWidth: .infinity, alignment: .leading) //frame정렬하니까 텍스트가 움직이네..
+           
+           
             
         }
-        .padding(.top, 10)
-        .padding(.leading, 20)
-        .padding(.trailing, 0)
-        .padding(.bottom, 7)
+       
     }
+}
+
+
+
+#Preview {
+    NavBar(lable: "강의실 쾌적 정보")
 }
