@@ -13,6 +13,7 @@ struct Home: View {
     var body: some View {
         VStack(alignment:.center, spacing: 0) {
             NavBar(lable: "건물선택")
+                .padding(.bottom, 23)
             
             //건물 리스트 스크롤뷰
             ScrollView {
@@ -26,9 +27,10 @@ struct Home: View {
                     }
                 }
             }
-            .padding(.horizontal, 20)
+            
             
         }
+        .padding(.horizontal, 20)
         .padding(.bottom, 10)
         .background(Color(red: 0.95, green: 0.96, blue: 0.96))
     }
