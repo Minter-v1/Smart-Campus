@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct BlueButton: View{
-    var text: String
+    var text: String = "blue button"
     
     var body: some View {
         VStack(alignment: .center) {
@@ -26,4 +26,9 @@ struct BlueButton: View{
                 .stroke(Color(red: 0.06, green: 0.59, blue: 0.72), lineWidth: 1))
         
     }
+}
+
+
+#Preview {
+    BlueButton()
 }
