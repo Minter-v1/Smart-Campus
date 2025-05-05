@@ -99,7 +99,7 @@ struct BuildingCardView: View {
         .overlay(
             Group {
                 if !isAvailable {
-                    Color.gray.opacity(0.1) // 이게 뭐하는건데
+                    Color.gray.opacity(0.15) // 이게 뭐하는건데
                         .cornerRadius(20)
                 }
             }

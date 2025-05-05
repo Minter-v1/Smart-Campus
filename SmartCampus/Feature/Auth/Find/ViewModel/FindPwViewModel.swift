@@ -7,12 +7,10 @@
 
 import SwiftUI
 
-struct FindPwViewModel: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-#Preview {
-    FindPwViewModel()
+class FindPwViewModel: ObservableObject {
+    @Published var userId: String = ""
+    @Published var phoneNumber: String = ""
+    @Published var verificationCode: String = ""
+   
+    //TODO: - 메서드 구현
 }

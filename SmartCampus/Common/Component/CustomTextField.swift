@@ -8,26 +8,36 @@
 import SwiftUI
 
 struct CustomTextField: View {
-    var placholder: String
+    var placeholder: String
     @Binding var text: String //외부에서 데이터 주입
-    var placeholderColor: Color = .gray //글자색
-    var textColor: Color = .primary //?뭐지
+    var placeholderColor: Color = Color(red: 0.8, green: 0.8, blue: 0.8) //글자색
+    var textColor: Color = .black //입력 텍스트 색상
+    var isSecure: Bool = false
     
     var body: some View {
         ZStack(alignment: .leading) {
                    if text.isEmpty {
                        Text(placeholder)
+                           .font( .custom("Pretendard", size: 14))
                            .foregroundColor(placeholderColor)
-                           .padding(.horizontal, 4)
                    }
-
-                   TextField("", text: $text)
-                       .foregroundColor(textColor)
-                       .padding(.horizontal, 4)
-               }
+            
+            Group {
+                if isSecure {
+                    SecureField("", text: $text)
+                } else {
+                    TextField("", text: $text)
+                }
+            }
+            .foregroundColor(textColor)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
+        
 }
 
 #Preview {
-    CustomTextField()
+    StatefulPreviewWrapper("") { binding in
+        CustomTextField(placeholder: "실명을 입력하세요", text: binding, isSecure: false)
+    }
 }
